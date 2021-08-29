@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "57159646-1bad-430d-9b3c-63afca4a1514",
+		"name": "Nornir-RESTCONF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST_LO18",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin_1234!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang.data+xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<interface>\r\n    <name>lo18</name>\r\n    <config>\r\n        <description>CONFIG CON RESTCONF AND XML EQUIPO5 </description>\r\n        <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">softwareLoopback</type>\r\n    </config>\r\n    <subinterfaces>\r\n        <subinterface>\r\n            <index>0</index>\r\n            <oc-ip:ipv4>\r\n                <oc-ip:addresses>\r\n                    <oc-ip:address>\r\n                        <oc-ip:ip>18.18.18.18</oc-ip:ip>\r\n                        <oc-ip:config>\r\n                            <oc-ip:ip>18.18.18.18</oc-ip:ip>\r\n                            <oc-ip:prefix-length>32</oc-ip:prefix-length>\r\n                        </oc-ip:config>\r\n                    </oc-ip:address>\r\n                </oc-ip:addresses>\r\n            </oc-ip:ipv4>\r\n        </subinterface>\r\n    </subinterfaces>\r\n</interface>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox-nxos-1.cisco.com/restconf/data/openconfig-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"sandbox-nxos-1",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH_LO9",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin_1234!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang.data+xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<interface>\r\n    <name>lo9</name>\r\n    <config>\r\n        <description>EQUIPO5_PATCH_LOOPBACK9</description>\r\n        <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">softwareLoopback</type>\r\n    </config>\r\n    <subinterfaces>\r\n        <subinterface>\r\n            <index>0</index>\r\n            <oc-ip:ipv4>\r\n                <oc-ip:addresses>\r\n                    <oc-ip:address>\r\n                        <oc-ip:ip>55.55.55.55</oc-ip:ip>\r\n                        <oc-ip:config>\r\n                            <oc-ip:ip>55.55.55.55</oc-ip:ip>\r\n                            <oc-ip:prefix-length>32</oc-ip:prefix-length>\r\n                        </oc-ip:config>\r\n                    </oc-ip:address>\r\n                </oc-ip:addresses>\r\n            </oc-ip:ipv4>\r\n        </subinterface>\r\n    </subinterfaces>\r\n</interface>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox-nxos-1.cisco.com/restconf/data/openconfig-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"sandbox-nxos-1",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_E24",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin_1234!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang.data+xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<interface>\r\n    <name>eth1/24</name>\r\n    <config>\r\n        <enabled>true</enabled>\r\n        <mtu>1500</mtu>\r\n        <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">EQUIPO5_PUT_ETH1-24</type>\r\n    </config>\r\n    <subinterfaces>\r\n        <subinterface> \r\n            <index>0</index>\r\n        </subinterface>\r\n    </subinterfaces>\r\n    <ethernet>\r\n        <switched-vlan>\r\n            <config>\r\n                <interface-mode>TRUNK</interface-mode>\r\n            </config>\r\n        </switched-vlan>\r\n    </ethernet>\r\n</interface>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox-nxos-1.cisco.com/restconf/data/openconfig-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"sandbox-nxos-1",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_VLAN29",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin_1234!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang.data+xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<interface>\r\n    <name>vlan29</name>\r\n    <config>\r\n        <description>CONFIG CON RESTCONF AND XML EQUIPO5 </description>\r\n        <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">vlan29</type>\r\n    </config>\r\n    <routed-vlan>\r\n        <oc-ip:ipv4>\r\n            <oc-ip:addresses>\r\n                <oc-ip:address>\r\n                    <oc-ip:ip>192.168.29.1</oc-ip:ip>\r\n                    <oc-ip:config>\r\n                        <oc-ip:ip>192.168.29.1</oc-ip:ip>\r\n                        <oc-ip:prefix-length>24</oc-ip:prefix-length>\r\n                    </oc-ip:config>\r\n                </oc-ip:address>\r\n            </oc-ip:addresses>\r\n        </oc-ip:ipv4>\r\n    </routed-vlan>\r\n</interface>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox-nxos-1.cisco.com/restconf/data/openconfig-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"sandbox-nxos-1",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_CONFIG",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin_1234!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandbox-nxos-1.cisco.com/restconf/data/openconfig-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"sandbox-nxos-1",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_CONFIG_ETH1-24",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin_1234!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandbox-nxos-1.cisco.com/restconf/data/openconfig-interfaces:interfaces/interface=eth1%2f24?content=config",
+					"protocol": "https",
+					"host": [
+						"sandbox-nxos-1",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=eth1%2f24"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "config"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
